@@ -1,2 +1,0 @@
-# progettoTSW
-forza napoli

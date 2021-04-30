@@ -1,7 +1,7 @@
 # progettoTSW
 frontend
 1) creare una "grafica"
-
+2) Aggiungere ogetti diretamente dal sito con autenticazione plutonio
 backend
 1) rendere retrocompatibile il costo degli elementi e quindi la somma del totale del carrello
 2) rendere dinamico l'indice degli elementi nella home

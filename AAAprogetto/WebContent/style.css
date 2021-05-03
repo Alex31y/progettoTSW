@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+
+body {
+	text-align: center;
+	font-family: verdana, sans-serif;
+	font-size: x-large;
+	color: black;
+	background-color: white;
+
+}
+
+
+
+.immaginedettagli {
+	border: 5px solid #ff7514;
+	display: inline-block;
+	width: 400px;
+	height: 400px;
+	margin: 10px;
+	margin-right:200px;
+	margin-left: 200px;
+	background-color: #abe2ff;
+}
+
+p.descrizione {
+	text-align: center;
+}
+
+
+table {
+	display: inline;
+	border-spacing: 50px;
+}
+
+a:active {
+	color: aqua;
+}
+
+a:visited {
+	color: orange;
+}
+
+a:hover {
+	color: lime;
+}

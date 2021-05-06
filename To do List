@@ -1,11 +1,16 @@
 # progettoTSW
 frontend
-1) creare una "grafica"
-2) Aggiungere ogetti diretamente dal sito con autenticazione plutonio
+1) creare una grafica x login.html
+2) Aggiungere ogetti diretamente dal sito con autenticazione plutonio -scritto da Fabio
+
 backend
 1) rendere retrocompatibile il costo degli elementi e quindi la somma del totale del carrello
 2) rendere dinamico l'indice degli elementi nella home
 3) la prof ha detto di non fare una servlet che gestisce tutto -> in particolare per il carrello {lez 6/05}
+
+LOGIN
+1) se l'utente sbaglia ad inserire i dati il sito deve comunicarlo
+2) implementare pagina di REGISTRAZIONE
 
 
 

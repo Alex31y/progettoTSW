@@ -5,6 +5,7 @@ frontend
 backend
 1) rendere retrocompatibile il costo degli elementi e quindi la somma del totale del carrello
 2) rendere dinamico l'indice degli elementi nella home
+3) la prof ha detto di non fare una servlet che gestisce tutto -> in particolare per il carrello {lez 6/05}
 
 
 

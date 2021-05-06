@@ -5,3 +5,10 @@ frontend
 backend
 1) rendere retrocompatibile il costo degli elementi e quindi la somma del totale del carrello
 2) rendere dinamico l'indice degli elementi nella home
+
+
+
+
+
+UTILE
+https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server

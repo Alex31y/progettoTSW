@@ -16,3 +16,24 @@ CREATE TABLE `database`.`utente` (
   UNIQUE INDEX `nickname_UNIQUE` (`nickname` ASC) VISIBLE,
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE);
 
+CREATE TABLE `database`.`odrine` (
+  `idodrine` INT NOT NULL,
+  `importo` FLOAT NULL,
+  `DATA` DATE NULL,
+  PRIMARY KEY (`idodrine`));
+CREATE TABLE `database`.`dettagli_ordine` (
+  `idordine` INT NOT NULL,
+  `idarticolo` INT NOT NULL,
+  `quantita` INT NULL,
+  PRIMARY KEY (`idordine`, `idarticolo`),
+  INDEX `idarticolo_idx` (`idarticolo` ASC) VISIBLE,
+  CONSTRAINT `idordine`
+    FOREIGN KEY (`idordine`)
+    REFERENCES `database`.`odrine` (`idodrine`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `idarticolo`
+    FOREIGN KEY (`idarticolo`)
+    REFERENCES `database`.`articoli` (`idarticoli`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);

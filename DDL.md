@@ -17,10 +17,12 @@ CREATE TABLE `database`.`utente` (
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE);
 
 CREATE TABLE `database`.`odrine` (
-  `idodrine` INT NOT NULL,
+  `idodrine` INT NOT NULL AUTO_INCREMENT,
   `importo` FLOAT NULL,
   `DATA` DATE NULL,
   PRIMARY KEY (`idodrine`));
+  
+  
 CREATE TABLE `database`.`dettagli_ordine` (
   `idordine` INT NOT NULL,
   `idarticolo` INT NOT NULL,

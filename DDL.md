@@ -16,26 +16,24 @@ CREATE TABLE `database`.`utente` (
   UNIQUE INDEX `nickname_UNIQUE` (`nickname` ASC) VISIBLE,
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE);
 
-CREATE TABLE `database`.`odrine` (
-  `idodrine` INT NOT NULL AUTO_INCREMENT,
-  `importo` FLOAT NULL,
-  `DATA` DATE NULL,
-  PRIMARY KEY (`idodrine`));
+CREATE TABLE odrine (
+   idordine int NOT NULL AUTO_INCREMENT,
+   importo float DEFAULT NULL,
+   DATA varchar(35) DEFAULT NULL,
+   utente varchar(15) DEFAULT NULL,
+   PRIMARY KEY (idordine),
+   KEY utentte_idx (utente),
+   CONSTRAINT utentte FOREIGN KEY (utente) REFERENCES utente (nickname)
+ ) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
   
   
-CREATE TABLE `database`.`dettagli_ordine` (
-  `idordine` INT NOT NULL,
-  `idarticolo` INT NOT NULL,
-  `quantita` INT NULL,
-  PRIMARY KEY (`idordine`, `idarticolo`),
-  INDEX `idarticolo_idx` (`idarticolo` ASC) VISIBLE,
-  CONSTRAINT `idordine`
-    FOREIGN KEY (`idordine`)
-    REFERENCES `database`.`odrine` (`idodrine`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `idarticolo`
-    FOREIGN KEY (`idarticolo`)
-    REFERENCES `database`.`articoli` (`idarticoli`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+CREATE TABLE dettagli_ordine (
+   utente varchar(15) NOT NULL,
+   idarticolo int NOT NULL,
+   quantita int DEFAULT NULL,
+   numero_ordine int DEFAULT NULL,
+   KEY idarticolo_idx (idarticolo),
+   KEY utente_idx (utente),
+   CONSTRAINT idarticolo FOREIGN KEY (idarticolo) REFERENCES articoli (idarticoli),
+   CONSTRAINT utente FOREIGN KEY (utente) REFERENCES utente (nickname)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

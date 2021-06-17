@@ -37,3 +37,17 @@ CREATE TABLE dettagli_ordine (
    CONSTRAINT idarticolo FOREIGN KEY (idarticolo) REFERENCES articoli (idarticoli),
    CONSTRAINT utente FOREIGN KEY (utente) REFERENCES utente (nickname)
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+ 
+ 
+ CREATE TABLE `database`.`dettagli_utente` (
+  `via` VARCHAR(45) NOT NULL,
+  `cap` VARCHAR(6) NULL,
+  `telefono` VARCHAR(12) NULL,
+  `nickname` VARCHAR(45) NULL,
+  PRIMARY KEY (`via`),
+  INDEX `nickname_idx` (`nickname` ASC) VISIBLE,
+  CONSTRAINT `nickname`
+    FOREIGN KEY (`nickname`)
+    REFERENCES `database`.`utente` (`nickname`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);

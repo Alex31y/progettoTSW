@@ -54,9 +54,9 @@ CREATE TABLE dettagli_ordine (
 
 
 
-
-
 //Fabio DDL
+
+
 CREATE TABLE `articoli` (
   `idarticoli` int NOT NULL,
   `nome` varchar(45) NOT NULL,
